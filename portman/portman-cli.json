@@ -1,0 +1,8 @@
+{
+  "local": "index.yaml",
+  "output": "collection.postman.json",
+  "envFile": "portman/.env-portman",
+  "includeTests": true,
+  "syncPostman": true,
+  "runNewman": false
+}
