@@ -1,0 +1,56 @@
+{
+  "version": 1.0,
+  "tests": {
+    "integrationTests": [
+      {
+        "name": "hello test",
+        "operations": [
+          {
+            "openApiOperationId": "sayHello",
+            "variations": [
+              {
+                "name": "If name is not provided, Return 400 Error",
+                "tests": {
+                  "contractTests": [
+                    {
+                      "statusCode": {
+                        "enabled": true,
+                        "expected": 400
+                      },
+                      "contetType": {
+                        "enabled": true,
+                        "expected": "text/plain"
+                      },
+                      "jsonBody": {
+                        "enabled": true
+                      },
+                      "schemaValidation": {
+                        "enabled": true
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "If name is provided, Return 200 OK",
+                "tests": {
+                  "contractTests": [
+                    {
+                      "statusCode": {
+                        "enabled": true,
+                        "expected": 200
+                      },
+                      "schemaValidation": {
+                        "enabled": true
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
